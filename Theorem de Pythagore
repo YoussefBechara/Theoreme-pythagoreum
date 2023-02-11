@@ -1,0 +1,26 @@
+import math
+def pythagore():
+    hauteur = 0
+    base = 0
+    hypotenuse = 0
+    missing = input("Quel cote souhaitez-vous calculez? 'a' pour hauteur, 'b' pour base, 'h' pour hypotenuse: ").lower()
+    if missing == 'h':
+        base = int(input('Quel est la longeur de ta base: '))
+        hauteur = int(input('Quel est la longeur de ton hauteur: '))
+        h_squared = (base ** 2) + (hauteur ** 2)
+        h = math.sqrt(h_squared)
+        print(f"Donc et d'apres le theoreme de Pythagore: ton hypotenuse mesure {h}")
+    if missing == 'b':
+        hypotenuse = int(input('Quel est la longeur de ton hypotenuse: '))
+        hauteur = int(input('Quel est la longeur de ton hauteur: '))
+        b_squared = (hypotenuse ** 2) - (hauteur ** 2)
+        b = math.sqrt(b_squared)
+        print(f"Donc et d'apres le theoreme de Pythagore: ta base mesure {b}")
+    if missing == 'a':
+        hypotenuse = int(input('Quel est la longeur de ton hypotenuse: '))
+        base = int(input('Quel est la longeur de ta base: '))
+        a_squared = (hypotenuse ** 2) - (base ** 2)
+        a = math.sqrt(a_squared)
+        print(f"Donc et d'apres le theoreme de Pythagore: ton hauteur mesure {a}")
+
+pythagore()
